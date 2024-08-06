@@ -1,0 +1,77 @@
+.news-item {
+    position: relative; /* Ensure the relative position for proper positioning of popup */
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 16px;
+    color: black;
+    animation: ticker 10s linear infinite;
+    text-align: right; /* Align headline text to the right */
+    cursor: pointer;
+
+}
+
+.news-item:hover .popup {
+    display: block; 
+    cursor: pointer;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    background-color: #000000cc;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    white-space: normal;
+    z-index: 1000;
+    bottom: -420px; /* Adjust positioning of popup to appear at the bottom */
+    right: 0; /* Position popup to the right */
+    transform: translateX(50%); /* Center popup horizontally */
+    height: 400px;
+    width: 700px;
+}
+.footer-container{
+    margin-top: 50px;
+
+}
+
+.division{
+   display: flex;
+   justify-content: center; 
+   margin-top: 10px;
+   height: 250px;
+}
+.boximage{
+    height:150px ;
+    width:400px;
+}
+@keyframes ticker {
+    0% { transform: translateX(100%); } /* Start from the right edge */
+    100% { transform: translateX(-100%); } /* Move to the left edge */
+}
+
+/* Mobile Responsive CSS */
+@media (max-width: 768px) {
+    .footer-container{
+        margin-top: -20px;
+    
+    }
+    .popup {
+        width: 90%; /* Reduce width for mobile devices */
+        height: auto; /* Adjust height to auto for better fit */
+        bottom: -200px; /* Adjust bottom position for better visibility */
+        right: 50%; /* Center horizontally */
+        transform: translateX(50%) translateY(0); /* Adjust transform for centering */
+    }
+
+    .news-item {
+        padding: 0 10px; /* Reduce padding for mobile devices */
+        font-size: 14px; /* Adjust font size for better readability on smaller screens */
+
+    }
+
+    @keyframes ticker {
+        0% { transform: translateX(100%); } /* Start from the right edge */
+        100% { transform: translateX(-200%); } /* Move further to the left to account for reduced screen width */
+    }
+}

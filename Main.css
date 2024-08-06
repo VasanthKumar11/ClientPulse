@@ -1,0 +1,182 @@
+.computer{
+   width: 600px;
+   margin-top: 30px;
+}
+.paragraph{
+    margin-top: 130px;
+
+}
+.heading {
+    font-family: 'Times New Roman', serif; /* Use a specific serif font for better appearance */
+    color: black;
+    text-align: center;
+    font-size: 2.9em; /* Increase font size for better visibility */
+    margin-top: 20px; /* Add some margin at the top */
+    padding: 10px; /* Add padding for better spacing */
+    /* border-bottom: 1px dotted black;  */
+    animation: fadeIn 2s ease-in-out; /* Add a fade-in animation */
+}
+
+.feature{
+    font-family: 'Times New Roman', serif; /* Use a specific serif font for better appearance */
+    color: black;
+    text-align: center;
+    font-size: 2.9em; /* Increase font size for better visibility */
+    margin-top: 20px; /* Add some margin at the top */
+    padding: 10px; /* Add padding for better spacing */
+    /* border-bottom: 1px dotted black;  */
+    animation: slideIn 2s ease-in-out;
+   
+}
+.feature:hover {
+    color: green; /* Change color on hover */
+    transform: scale(1.05); /* Slightly scale up the text */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scale */
+}
+/* Keyframes for the fadeIn animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Slight upward movement */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Position it back to original */
+    }
+}
+
+/* Hover effect for added interactivity */
+.heading:hover {
+    color: green; /* Change color on hover */
+    transform: scale(1.05); /* Slightly scale up the text */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scale */
+}
+
+
+
+.image {
+    width: 60px;
+    margin-top: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Add transition for hover effects */
+    display: block; /* Ensure image behaves like a block element */
+    margin-left: auto; /* Centering horizontally */
+    margin-right: auto; /* Centering horizontally */
+}
+
+/* Hover Effect */
+.image:hover {
+    transform: scale(1.1); /* Slightly scale up the image */
+    opacity: 0.8; /* Slightly reduce opacity */
+}
+
+.maincard {
+    height: 300px;
+    /* border-radius: 20px; */
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    background-color: #ffffff; /* Set a light background color */
+    transition: transform 0.3s, box-shadow 0.3s; /* Add smooth transitions */
+    overflow: hidden; /* Hide overflowing content */
+    position: relative; /* Position elements inside the card */
+}
+
+.maincard:hover {
+    transform: scale(1.05); /* Scale up the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
+}
+
+.maincard::before {
+    content: ''; /* Add a pseudo-element */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Position it at the top */
+    left: 0; /* Position it at the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.5)); /* Add a gradient overlay */
+    z-index: 1; /* Place it above other content */
+    opacity: 0; /* Initially hide */
+    transition: opacity 0.3s; /* Add transition for opacity */
+}
+
+.maincard:hover::before {
+    opacity: 1; /* Show the overlay on hover */
+}
+
+.maincard-content {
+    position: relative; /* Position it relatively */
+    z-index: 2; /* Place it above the overlay */
+    color: #333; /* Text color */
+    padding: 20px; /* Add padding */
+    transform: translateY(-20px); /* Move the content up initially */
+    opacity: 0; /* Initially hide */
+    transition: transform 0.3s, opacity 0.3s; /* Add transition for transform and opacity */
+}
+
+.maincard:hover .maincard-content {
+    transform: translateY(0); /* Move the content back to its original position on hover */
+    opacity: 1; /* Show the content on hover */
+}
+
+.maincard-title {
+    font-size: 24px; /* Title font size */
+    margin-bottom: 10px; /* Add some space below the title */
+}
+
+.maincard-description {
+    font-size: 16px; /* Description font size */
+    line-height: 1.5; /* Line height */
+}
+
+.animated2{
+    width: 350px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+.animated3{
+    width: 350px;
+    margin-top: 50px;
+    border-radius: 20px;
+    height: 250px;
+    margin-left: 80px;
+}
+.animated4{
+    width: 350px;
+    margin-top: 80px;
+    border-radius: 20px;
+    height: 250px;
+}
+
+
+
+
+@media screen and (max-width:766px) {
+    .animated4{
+        width: 300px;
+        margin-top: 30px;
+        border-radius: 20px;
+        height: 250px;
+        margin-left: 5px;
+    }
+    .animated2{
+        width: 300px;
+        margin-top: 20px;
+        border-radius: 20px;
+        margin-left: 5px;
+    }
+    .animated3{
+        width: 300px;
+        margin-top: 30px;
+        border-radius: 20px;
+        height: 250px;
+        margin-left: 5px;
+    }
+    
+    .computer{
+        width: 300px;
+        margin-top: 30px;
+     }
+     .paragraph{
+         margin-top: 30px;
+     
+     }
+}

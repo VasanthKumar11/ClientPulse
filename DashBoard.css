@@ -1,0 +1,50 @@
+.card-custom {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+  
+  }
+  
+  .card-custom:hover {
+    transform: scale(1.05);
+  }
+.dashboardIcon{
+  width: 70px;
+margin-left: 0px;
+
+}
+
+.images{
+width: 150px;
+margin-left: -120px;
+margin-bottom: -500px;
+
+}
+
+@media screen and (max-width:766px) {
+  .images{
+    width: 100px;
+    margin-left: 100px; /* Adjust or remove margin-left for mobile view */
+    margin-bottom: 20px; /* Adjust or remove margin-bottom for mobile view */
+    
+    }
+  .card-custom {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+  }
+  
+  .card-custom:hover {
+    transform: none;
+  }
+  .dashboardIcon{
+    width: 100px;
+  margin-left: 60px;
+  margin-bottom: 10px;
+  
+  }
+  
+}
+  
+
+  
